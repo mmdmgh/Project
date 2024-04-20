@@ -1,15 +1,13 @@
-import { useState } from 'react'
-import './App.css'
-
 function App() {
-
   return (
     <>
-      <div id='font' className='font-'>
+      <div
+        className="font-os text-9xl"
+      >
         khdfvkfhjk
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
