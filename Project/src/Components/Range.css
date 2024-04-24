@@ -1,0 +1,18 @@
+.example-thumb{
+    background-color: lime;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 0.001px;
+    outline: coral;
+}
+
+.example-track{
+    background-color: rgb(141, 140, 140);
+    height: 5px;
+    border-radius: 20px;
+}
+
+.example-track.example-track-1 {
+    background: rgb(255, 0, 0);
+}
