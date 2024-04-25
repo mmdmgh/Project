@@ -1,5 +1,18 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
+import {
+  faAngleRight,
+  faMagnifyingGlass,
+  faCaretDown,
+  faCircle,
+  faPhone,
+  faRoad,
+  faGasPump,
+  faGear,
+  faCarRear,
+  faBrush,
+  faCopyright,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const SiteContext = createContext({});
 
@@ -19,7 +32,20 @@ const SiteContextProvider = (props) => {
     fetchData();
   }, []);
 
-  const contextValue = {apiData};
+  const contextValue = {
+    apiData,
+    faAngleRight,
+    faMagnifyingGlass,
+    faCaretDown,
+    faCircle,
+    faPhone,
+    faRoad,
+    faGasPump,
+    faGear,
+    faCarRear,
+    faBrush,
+    faCopyright,
+  };
 
   return (
     <SiteContext.Provider value={contextValue}>
