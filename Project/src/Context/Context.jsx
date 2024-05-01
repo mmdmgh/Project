@@ -18,6 +18,10 @@ export const SiteContext = createContext({});
 
 const SiteContextProvider = (props) => {
   const [apiData, setApiData] = useState([]);
+  const [isOpen,setIsOpen] = useState(false)
+  const [seeName, setSeeName] = useState(false);
+  const [names, setNames] = useState();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -32,6 +36,17 @@ const SiteContextProvider = (props) => {
     fetchData();
   }, []);
 
+  const closeHandler = ()=>{
+    setIsOpen(false)
+  }
+  
+  const closeSee = ()=>{
+    setSeeName(false)
+  }
+
+
+
+
   const contextValue = {
     apiData,
     faAngleRight,
@@ -45,6 +60,14 @@ const SiteContextProvider = (props) => {
     faCarRear,
     faBrush,
     faCopyright,
+    closeHandler,
+    isOpen,
+    setIsOpen,
+    seeName,
+    setSeeName,
+    closeSee,
+    names,
+    setNames,
   };
 
   return (

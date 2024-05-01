@@ -4,6 +4,7 @@ import NavBar from "./Components/NavBar";
 import First from "./Pages/Home";
 import Product from "./Pages/Product";
 import Footer from "./Components/Footer";
+import SiteCat from "./Pages/SiteCat";
 
 function App() {
   return (
@@ -13,11 +14,12 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<First />} />
-            <Route path="/product" element={<Product/>}>
+            <Route path="/:type" element={<SiteCat />} />
+            <Route path="/product" element={<Product />}>
               <Route path=":productId" element={<Product />} />
             </Route>
           </Routes>
-          <Footer/>
+          <Footer />
         </BrowserRouter>
       </div>
     </>

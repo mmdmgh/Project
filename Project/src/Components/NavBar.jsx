@@ -6,6 +6,7 @@ import {
   faUser,
   faPlus,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [isHoveredMyAccount, setIsHoveredMyAccount] = useState(false);
@@ -24,10 +25,14 @@ const NavBar = () => {
         >
           Cars
           <div
-            className={isHoveredCars ? "block bg-slate-700" : "hidden"}
-            style={{ position: "absolute" }}
+            className={isHoveredCars ? "block bg-gray-300 " : "hidden"}
+            style={{ position: "absolute", zIndex: "1" }}
           >
-            jhvdfvjhf
+            <Link to="/car">
+              <p className="p-3">Bay car</p>
+            </Link>
+            <hr />
+            <p className="p-3">Sell your car</p>
           </div>
         </li>
         <li
@@ -35,12 +40,16 @@ const NavBar = () => {
           onMouseLeave={() => setIsHoveredMotors(false)}
           className="py-5"
         >
-          Motors
+          Bike
           <div
-            className={isHoveredMotors ? "block bg-slate-700" : "hidden"}
-            style={{ position: "absolute" }}
+            className={isHoveredMotors ? "block bg-gray-300" : "hidden"}
+            style={{ position: "absolute", zIndex: "1" }}
           >
-            jhvdfvjhf
+            <Link to="/motor">
+              <p className="p-3">Bay bike</p>
+            </Link>
+            <hr />
+            <p className="p-3">Sell your bike</p>
           </div>
         </li>
         <li
@@ -50,32 +59,19 @@ const NavBar = () => {
         >
           Truck
           <div
-            className={isHoveredTruck ? "block bg-slate-700" : "hidden"}
+            className={isHoveredTruck ? "block bg-gray-300" : "hidden"}
             style={{ position: "absolute", maxWidth: "200px", zIndex: "1" }}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-            iure porro voluptas ad nesciunt quod mollitia voluptatum maiores,
-            corporis esse dolores, illum magnam quos autem delectus. Recusandae
-            accusantium sequi voluptatem, deleniti nulla consequuntur corporis
-            eveniet sed nihil? A, nam accusantium placeat pariatur ipsa illo, in
-            suscipit sequi voluptas fugiat molestias.
+            <Link to="/truck">
+              <p className="p-3">Bay truck</p>
+            </Link>
+            <hr />
+            <p className="p-3">Sell your truck</p>
           </div>
         </li>
-        <li
-          onMouseEnter={() => setIsHoveredContact(true)}
-          onMouseLeave={() => setIsHoveredContact(false)}
-          className="py-5"
-        >
-          Contact
-          <div
-            className={isHoveredContact ? "block bg-slate-700" : "hidden"}
-            style={{ position: "absolute" }}
-          >
-            jhvdfvjhf
-          </div>
-        </li>
+        <li className="py-5">Contact</li>
       </ul>
-      <FontAwesomeIcon icon={faCaravan} className="w-14 h-14" />
+      <Link to="/"><FontAwesomeIcon icon={faCaravan} className="w-14 h-14" /></Link>
       <div>
         <ul className="flex gap-10 py-5">
           <li
@@ -91,7 +87,7 @@ const NavBar = () => {
               <FontAwesomeIcon icon={faAngleDown} className="text-slate-800" />
             </div>
             <div
-              className={isHoveredMyAccount ? "block bg-slate-700" : "hidden"}
+              className={isHoveredMyAccount ? "block bg-gray-300" : "hidden"}
               style={{ position: "absolute" }}
             >
               {" "}
