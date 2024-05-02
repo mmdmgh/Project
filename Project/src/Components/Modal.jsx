@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SiteContext } from "../Context/Context";
+import Search from "./Search";
 
 const Modal = (e) => {
   const { faMagnifyingGlass, apiData, closeHandler, seeName, setSeeName,setNames } =
@@ -30,18 +31,8 @@ const Modal = (e) => {
             className="bg-white p-5 w-1/4 h-max"
           >
             <p>Choose brand and model</p>
-            <p className="text-sm">Choose your intended brand and model</p>
             <div className=" p-0  flex items-center mt-5 border">
-              <FontAwesomeIcon
-                className="absolute pl-3"
-                icon={faMagnifyingGlass}
-              />
 
-              <input
-                className="p-3 pl-12 w-11/12 rounded-3xl outline-none"
-                type="text"
-                placeholder="Search"
-              />
             </div>
             <div>
               {brandlist.map((brandName, j) => {
@@ -52,7 +43,7 @@ const Modal = (e) => {
                       setSeeName((prev) => !prev);
                       setNames(brandName);
                     }}
-                    className="cursor-pointer"
+                    className="cursor-pointer px-1 my-2 shadow"
                   >
                     {brandName}
                   </div>

@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = () => {
   const { faCopyright } = useContext(SiteContext);
   return (
-    <div>
-      <hr className="my-2" />
-      <div className="flex justify-between">
+    <div className=" fixed bg-white bottom-0 w-full">
+      <hr className="mb-2" />
+      <div className="flex justify-between ">
         <div className="flex gap-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"

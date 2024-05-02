@@ -21,19 +21,11 @@ const ModalName = (brand) => {
         <div className="text-xl font-semibold py-2">
           Choose a model of {names}
         </div>
-        <div className=" p-0  flex items-center mt-5 border">
-          <FontAwesomeIcon className="absolute pl-3" icon={faMagnifyingGlass} />
 
-          <input
-            className="p-3 pl-12 w-11/12 rounded-3xl outline-none"
-            type="text"
-            placeholder="Search"
-          />
-        </div>
         {apiData.map((brandName, i) => {
           if (brandName.brand == names) {
             return (
-              <div className="my-2 p-2">
+              <div key={i} className="my-2 p-2 shadow">
                 <Link onClick={scrollToTop} to={`/product/${brandName.id}`}>
                   <div>
                     <p>{brandName.name}</p>

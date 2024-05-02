@@ -6,10 +6,11 @@ import "./Range.css";
 import { SiteContext } from "../Context/Context";
 import Modal from "./Modal";
 import ModalName from "./ModalName";
+import Search from "./Search";
 
 const Hero = () => {
-
-  const { faMagnifyingGlass, faCaretDown,isOpen,setIsOpen,seeName } = useContext(SiteContext);
+  const { faMagnifyingGlass, faCaretDown, isOpen, setIsOpen, seeName } =
+    useContext(SiteContext);
 
   return (
     <div
@@ -23,13 +24,9 @@ const Hero = () => {
       }}
     >
       <div className="w-full h-1/4 flex flex-col items-center justify-center text-3xl text-lime-300">
-        <div className=" p-0  flex items-center mt-5">
-          <FontAwesomeIcon className="absolute pl-3" icon={faMagnifyingGlass} />
-          <input
-            className="p-3 pl-12 rounded-3xl outline-none"
-            type="text"
-            placeholder="Search"
-          />
+        <div className=" p-0  flex items-center mt-5 ">
+          
+          <Search />
         </div>
         <div>
           <span className="m-2 text-base bg-slate-400 rounded-3xl p-1">
@@ -89,7 +86,7 @@ const Hero = () => {
           >
             <p className="inline pr-20 cursor-pointer">Brand,Model</p>
             <FontAwesomeIcon icon={faCaretDown} />
-            {isOpen&&<Modal />}
+            {isOpen && <Modal />}
             {seeName && <ModalName />}
           </div>
         </div>
