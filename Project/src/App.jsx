@@ -5,6 +5,8 @@ import First from "./Pages/Home";
 import Product from "./Pages/Product";
 import Footer from "./Components/Footer";
 import SiteCat from "./Pages/SiteCat";
+import SignUp from "./Components/SignUp";
+import Login from "./Components/Login";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
             <Route path="/product" element={<Product />}>
               <Route path=":productId" element={<Product />} />
             </Route>
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
           <Footer />
         </BrowserRouter>

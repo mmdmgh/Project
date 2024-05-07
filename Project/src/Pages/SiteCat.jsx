@@ -24,7 +24,7 @@ const SiteCat = () => {
 
   return (
     <div className="grid grid-cols-6 m-auto">
-      <div className=" col-span-1">tyhrthrtyhry</div>
+      <div className=" col-span-1"></div>
       <div className=" col-span-5">
         {apiData.map((item, i) => {
           if (item.type == type) {
