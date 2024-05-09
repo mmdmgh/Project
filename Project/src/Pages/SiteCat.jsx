@@ -32,7 +32,7 @@ const SiteCat = () => {
               <Link to={`/product/${item.id}`}>
               <div key={i} className="flex border-b w-2/3">
                 <div className="w-1/4">
-                  <img className="py-2 " src={item.img1} alt="" />
+                  <img className="py-2" src={item.img1} alt="" />
                 </div>
                 <div className="w-4/5 ">
                   <div className="h-1/5 p-2">

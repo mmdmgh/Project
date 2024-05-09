@@ -9,8 +9,7 @@ import ModalName from "./ModalName";
 import Search from "./Search";
 
 const Hero = () => {
-  const { faMagnifyingGlass, faCaretDown, isOpen, setIsOpen, seeName } =
-    useContext(SiteContext);
+  const { faCaretDown, isOpen, setIsOpen, seeName } = useContext(SiteContext);
 
   return (
     <div
@@ -24,47 +23,20 @@ const Hero = () => {
       }}
     >
       <div className="w-full h-1/4 flex flex-col items-center justify-center text-3xl text-lime-300">
-        <div className=" p-0  flex items-center mt-5 ">
-          
+        <div className=" p-0  flex items-center mt-5 w-2/3 justify-center ">
           <Search />
         </div>
-        <div>
-          <span className="m-2 text-base bg-slate-400 rounded-3xl p-1">
-            kjfg
-          </span>
-          <span className="m-2 text-base bg-slate-400 rounded-3xl p-1">
-            dofovjb
-          </span>
-          <span className="m-2 text-base bg-slate-400 rounded-3xl p-1">
-            dfv
-          </span>
-          <span className="m-2 text-base bg-slate-400 rounded-3xl p-1">
-            bdf
-          </span>
-          <span className="m-2 text-base bg-slate-400 rounded-3xl p-1">
-            dfb
-          </span>
-          <span className="m-2 text-base bg-slate-400 rounded-3xl p-1">
-            dbfdbd
-          </span>
-          <span className="m-2 text-base bg-slate-400 rounded-3xl p-1">
-            befrg
-          </span>
-          <span className="m-2 text-base bg-slate-400 rounded-3xl p-1">
-            grbfgr
-          </span>
-          <span className="m-2 text-base bg-slate-400 rounded-3xl p-1">
-            rthtr
-          </span>
-        </div>
+
       </div>
-      <div className="h-3/4 flex justify-end items-center w-fit flex-col m-auto">
-        <button className="py-3 px-8 border rounded-full text-2xl font-semibold flex mr-auto ">
+      <div className="h-3/4 flex justify-end w-2/4 flex-col m-auto ">
+        <button className="py-3 px-8 border rounded-full text-2xl font-semibold flex mr-auto scale-75 md:scale-100">
           More info
         </button>
-        <div className="bg-white flex items-center gap-10 py-5 px-20  mt-3 -mb-12 border ">
-          <button className="bg-lime-500 rounded-full py-3 px-8 ">Show</button>
-          <div className="w-52">
+        <div className="bg-white flex flex-col-reverse md:flex-row items-center gap-10 py-5 px-10  mt-3 -mb-12 border ">
+          <button className="bg-lime-500 rounded-full py-3 px-12 w-2/12 flex justify-center">
+            Show
+          </button>
+          <div className="w-7/12">
             <ReactSlider
               className="horizontal-slider flex items-center "
               thumbClassName="example-thumb "
@@ -83,8 +55,9 @@ const Hero = () => {
             onClick={() => {
               setIsOpen((prev) => !prev);
             }}
+            className="w-3/12 flex items-center justify-center"
           >
-            <p className="inline pr-20 cursor-pointer">Brand,Model</p>
+            <p className="inline cursor-pointer">Brand,Model</p>
             <FontAwesomeIcon icon={faCaretDown} />
             {isOpen && <Modal />}
             {seeName && <ModalName />}

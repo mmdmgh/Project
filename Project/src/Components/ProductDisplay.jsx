@@ -53,12 +53,12 @@ const ProductDisplay = () => {
           <span>{apiData.location}</span>
           <span className="mr-20">{apiData.price}</span>
         </div>
-        <button className="px-20 py-3 bg-lime-400 rounded-full font-semibold ">
+        <button className=" px-1 w-2/4 py-3 bg-lime-400 rounded-full font-semibold ">
           <p>
             Call the seller <FontAwesomeIcon icon={faPhone} />
           </p>
         </button>
-        <div className="grid grid-cols-3 mt-20 w-full">
+        <div className="grid grid-cols-2 md:grid-cols-3 mt-20 w-full">
           <div className="p-5 max-w-max flex flex-col items-center">
             <FontAwesomeIcon
               className="bg-gray-200 rounded-full p-5"
@@ -117,7 +117,7 @@ const ProductDisplay = () => {
         <div className="text-xl font-semibold my-5">
           Technical specifications
         </div>
-        <div className="grid grid-cols-4">
+        <div className="grid grid-cols-2 gap-14 md:grid-cols-4">
             <div>
                 <p className="p-2 text-gray-400 font-thin text-sm">Engine size</p>
                 <p className="p-2 font-medium">{apiData.motorCa}</p>

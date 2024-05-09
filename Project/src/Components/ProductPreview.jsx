@@ -18,7 +18,7 @@ const ProductPreview = () => {
           <FontAwesomeIcon className="mt-3 ml-6" icon={faAngleRight} />
         </div>
       </div>
-      <div className="grid grid-cols-5">
+      <div className="grid md:grid-cols-5 grid-cols-1">
         {apiData.map((item, i) => {
           if (item.id <= 5) {
             return (

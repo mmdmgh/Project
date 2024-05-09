@@ -11,7 +11,7 @@ import {
   faGear,
   faCarRear,
   faBrush,
-  faCopyright,
+  faCopyright,faBars
 } from "@fortawesome/free-solid-svg-icons";
 
 export const SiteContext = createContext({});
@@ -60,6 +60,7 @@ const SiteContextProvider = (props) => {
     faCarRear,
     faBrush,
     faCopyright,
+    faBars,
     closeHandler,
     isOpen,
     setIsOpen,

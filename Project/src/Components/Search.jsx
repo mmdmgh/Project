@@ -37,18 +37,18 @@ const Search = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div className="bg-white p-2 rounded">
+        <div className="bg-white p-2 rounded w-3/4 flex">
           <input
             placeholder="Search"
             type="text"
             value={query}
             onChange={handleChange}
-            className="focus:outline-none "
+            className="focus:outline-none w-full placeholder-slate-300"
             onFocus={() => {
               setIsFocused(true);
             }}
           />
-          <button type="submit">
+          <button className="w-1/4" type="submit">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
         </div>
